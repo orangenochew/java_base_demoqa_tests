@@ -15,7 +15,7 @@ public class RegistrationBoxTests extends TestBase {
         $("#firstName").setValue("Alter");
         $("#lastName").setValue("Ego");
         $("#userEmail").setValue("AlterEgo@space.com");
-        $(byName("gender")).click();
+        $("#gender-radio-2").click();
         $("#userNumber").setValue("1234567890");
         $("#dateOfBirthInput").click();
         $(".react-datepicker__year-select").$(byText("1990")).click();
@@ -48,7 +48,7 @@ public class RegistrationBoxTests extends TestBase {
         open("/automation-practice-form");
         $("#firstName").setValue("Alter");
         $("#lastName").setValue("Ego");
-        $(byName("gender")).click();
+        $("#gender-radio-2").click();
         $("#userNumber").setValue("1234567890");
         $("#submit").click();
 
@@ -62,7 +62,7 @@ public class RegistrationBoxTests extends TestBase {
     void negativeFirstNameIsNull () {
         open("/automation-practice-form");
         $("#lastName").setValue("Ego");
-        $(byName("gender")).click();
+        $("#gender-radio-2").click();
         $("#userNumber").setValue("1234567890");
         $("#submit").click();
 
