@@ -15,14 +15,14 @@ public class RegistrationBoxTests extends TestBase {
         $("#firstName").setValue("Alter");
         $("#lastName").setValue("Ego");
         $("#userEmail").setValue("AlterEgo@space.com");
-        $("#gender-radio-2").click();
+        $("#genterWrapper").$(byText("Male")).click();
         $("#userNumber").setValue("1234567890");
         $("#dateOfBirthInput").click();
         $(".react-datepicker__year-select").$(byText("1990")).click();
         $(".react-datepicker__month-select").$(byText("March")).click();
         $(".react-datepicker__day--010").click();
         $(".subjects-auto-complete__input").setValue("p").pressEnter();
-        $("#hobbies-checkbox-1").click();
+        $("#hobbiesWrapper").$(byText("Sports")).click();
         $("#uploadPicture").uploadFromClasspath("VanGogh_1887_Selbstbildnis.jpg");
         $("#currentAddress").setValue("Alfa Centavra square, 1");
         $("#react-select-3-input").setValue("NCR").pressEnter();
@@ -48,7 +48,7 @@ public class RegistrationBoxTests extends TestBase {
         open("/automation-practice-form");
         $("#firstName").setValue("Alter");
         $("#lastName").setValue("Ego");
-        $("#gender-radio-2").click();
+        $("#genterWrapper").$(byText("Male")).click();
         $("#userNumber").setValue("1234567890");
         $("#submit").click();
 
@@ -62,7 +62,7 @@ public class RegistrationBoxTests extends TestBase {
     void negativeFirstNameIsNull () {
         open("/automation-practice-form");
         $("#lastName").setValue("Ego");
-        $("#gender-radio-2").click();
+        $("#genterWrapper").$(byText("Male")).click();
         $("#userNumber").setValue("1234567890");
         $("#submit").click();
 
@@ -85,7 +85,7 @@ public class RegistrationBoxTests extends TestBase {
         open("/automation-practice-form");
         $("#firstName").setValue("Alter");
         $("#lastName").setValue("Ego");
-        $(byName("gender")).click();
+        $("#genterWrapper").$(byText("Male")).click();
         $("#submit").click();
 
         $(".table-responsive").shouldNotBe(visible);
