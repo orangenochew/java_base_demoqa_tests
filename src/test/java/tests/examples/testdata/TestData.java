@@ -12,6 +12,7 @@ public class TestData {
             monthOfBirth = "March",
             dayOfBirth = "10",
             hobbies = "Sports",
+            picture = "VanGogh_1887_Selbstbildnis.jpg",
             currentAddress = "Alfa Centavra square, 1",
             userState = "NCR",
             userCity = "Delhi",
