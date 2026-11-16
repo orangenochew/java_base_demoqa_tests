@@ -28,16 +28,16 @@ public class RegistrationBoxTests extends TestBase {
 
                 .checkModalWindow()
                 .checkOutput()
-                .checkFields("Student Name", firstName + " " + lastName)
-                .checkFields("Student Email", userEmail)
-                .checkFields("Gender", gender)
-                .checkFields("Mobile", userNumber)
-                .checkFields("Date of Birth",dayOfBirth + " " + monthOfBirth + "," + yearOfBirth)
-                .checkFields("Subjects", subject)
-                .checkFields("Hobbies", hobbies)
-                .checkFields("Picture", picture)
-                .checkFields("Current Address", currentAddress)
-                .checkFields("State and City", userState + " " + userCity);
+                .checkTable("Student Name", firstName + " " + lastName)
+                .checkTable("Student Email", userEmail)
+                .checkTable("Gender", gender)
+                .checkTable("Mobile", userNumber)
+                .checkTable("Date of Birth",dayOfBirth + " " + monthOfBirth + "," + yearOfBirth)
+                .checkTable("Subjects", subject)
+                .checkTable("Hobbies", hobbies)
+                .checkTable("Picture", picture)
+                .checkTable("Address", currentAddress)
+                .checkTable("State and City", userState + " " + userCity);
     }
 
     @Test //только обязательные поля
@@ -51,9 +51,9 @@ public class RegistrationBoxTests extends TestBase {
 
                 .checkModalWindow()
                 .checkOutput()
-                .checkFields("Student Name", firstName + " " + lastName)
-                .checkFields("Gender", gender)
-                .checkFields("Mobile", userNumber);
+                .checkTable("Student Name", firstName + " " + lastName)
+                .checkTable("Gender", gender)
+                .checkTable("Mobile", userNumber);
     }
 
     @Test //негативный сценарий: не заполнен first name

@@ -73,7 +73,7 @@ public class RegistrationBoxPage {
     }
 
     public RegistrationBoxPage setSubjects (String value) {
-        subjectInput.setValue(value);
+        subjectInput.setValue(value).pressEnter();
         return this;
     }
 
@@ -126,7 +126,8 @@ public class RegistrationBoxPage {
         return this;
     }
 
-    public RegistrationBoxPage checkFields (String key, String value) {
+    public RegistrationBoxPage checkTable (String key, String value) {
+        resultComponent.checkTable(key,value);
         return this;
     }
 
