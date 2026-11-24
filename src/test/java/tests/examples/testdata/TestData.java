@@ -1,21 +1,24 @@
 package tests.examples.testdata;
 
+import static utils.RandomUtils.*;
+
 public class TestData {
+
     public static String
-            firstName = "Alter",
-            lastName = "Ego",
-            userEmail = "AlterEgo@space.com",
-            gender = "Male",
-            userNumber = "1234567890",
-            subject = "Physics",
-            yearOfBirth = "1990",
-            monthOfBirth = "March",
-            dayOfBirth = "10",
-            hobbies = "Sports",
+            firstName = getRandomString(10),
+            lastName = getRandomString(10),
+            userEmail = getRandomEmail(8),
+            gender = getRandomGender(),
+            userNumber = getRandomPhone(),
+            subject = getRandomSubject(),
+            hobbies = getRandomHobbies(),
+            yearOfBirth = getRandomYear(),
+            monthOfBirth = getRandomMonth(),
+            dayOfBirth = getRandomDay(),
             picture = "VanGogh_1887_Selbstbildnis.jpg",
-            currentAddress = "Alfa Centavra square, 1",
-            userState = "NCR",
-            userCity = "Delhi",
-            permanentAddress = "Test street, 5";
+            currentAddress = getRandomAddress(),
+            userState = getRandomState(),
+            userCity = getRandomCity(userState),
+            permanentAddress = getRandomAddress();
 
 }
