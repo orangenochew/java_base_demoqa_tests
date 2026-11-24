@@ -2,10 +2,7 @@ package tests.examples;
 
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selectors.*;
-import static com.codeborne.selenide.Selenide.*;
+
 import static tests.examples.testdata.TestData.*;
 
 public class RegistrationBoxTests extends TestBase {
@@ -18,7 +15,7 @@ public class RegistrationBoxTests extends TestBase {
                 .typeUserEmail(userEmail)
                 .setGender(gender)
                 .typeUserNumber(userNumber)
-                .setDateOfBirth(dayOfBirth,monthOfBirth,yearOfBirth)
+               .setDateOfBirth(dayOfBirth,monthOfBirth,yearOfBirth)
                 .setHobbies(hobbies)
                 .setSubjects(subject)
                 .uploadPicture(picture)
@@ -88,7 +85,6 @@ public class RegistrationBoxTests extends TestBase {
 
                 .checkOutputIsNotVisible();
     }
-
 
 
 
